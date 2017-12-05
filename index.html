@@ -1,0 +1,190 @@
+<html>
+
+<head>
+  <meta name="designer" content="Raymond G McCord">
+  <meta name="programer" content="Raymond G McCord">
+  <meta name="author" content="Raymond G McCord">
+  <meta name="description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js'></script>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
+  <title>threejs - basic</title>
+  <script src="build/three.js"></script>
+  <script src="./wavy.js"></script>
+  <script src="./libs/helpers.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+  <!-- <script src="./frizz.js"></script> -->
+  <script src="./particles.js"></script>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <!-- This is a basic print stylesheet. It has a media query in it, so it will only be applied when people hit print.  -->
+  <link rel="stylesheet" href="css/print.css">
+  <!-- Here's our custom stylesheet. Open it up to add styles to your page. -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    /*.myCanvas {
+      z-index: 1000
+    }*/
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      /*background-color: rgb(255,255,255)*/
+    }
+  </style>
+
+  <!-- ===============SHADERS================= -->
+  <script id="vertexShader" type="x-shader/x-vertex">
+  varying vec2 vUv;
+  void main() {
+  vUv = uv;
+
+  vec4 mvPosition = modelViewMatrix * vec4(position, 1.0 );
+  gl_Position = projectionMatrix * mvPosition;
+  }
+
+  </script>
+
+  <script id="fragmentShader" type="x-shader/x-fragment">
+
+  uniform vec2 res;
+  uniform float globeTime;
+  uniform vec2 mouse;
+
+  varying vec2 vUv;
+
+  void main(void)
+  {
+  float time=globeTime*0.06;
+  vec2 uv = (-1.0 + 7.0 *vUv)* 0.3;
+
+  vec2 uv0=uv;
+  float i0=0.1;
+  float i1=0.7;
+  float i2=0.9;
+  float i4=10.6;
+  for(int s=0;s<20;s++) {
+          vec2 r;
+          r=vec2(cos(uv.y*i0-i4+3.0/i1),sin(uv.x*i0-i4+time/i1))/i2;
+          r+=vec2(-r.y,r.x)*0.03;
+          uv.xy+=r-0.005;
+          i0*=1.93;
+      i1*=1.15;
+      i2*=1.7;
+          i4+=0.65+0.1*time*i1;
+          }
+          float r=sin(uv.x-time)*0.4+0.006;
+          float b=sin(uv.y+time)*0.4+0.006;
+          float g=sin(uv.y+time)*0.2+0.006;
+
+
+   gl_FragColor = vec4(r,g,b,0.1);
+  }
+  </script>
+
+</head>
+
+<body>
+
+  <div id="myCanvas"></div>
+  <div id='p5Canvas'></div>
+
+  <script>
+    init();
+    animate();
+  </script>
+
+  <div class="ct" id="t1">
+    <div class="ct" id="t2">
+      <div class="ct" id="t3">
+        <div class="ct" id="t4">
+          <div class="ct" id="t5">
+
+            <ul id="menu">
+              <a href="#t1">
+                <li class="icon fa fa-circle-o" id="about"></li>
+              </a>
+              <a href="#t2">
+                <li class="icon fa fa-circle-o" id="portfolio"></li>
+              </a>
+              <a href="#t3">
+                <li class="icon fa fa-circle-o" id="process"></li>
+              </a>
+              <a href="#t4">
+                <li class="icon fa fa-circle-o" id="blog"></li>
+              </a>
+              <a href="#t5">
+                <li class="icon fa fa-circle-o" id="contact"></li>
+              </a>
+            </ul>
+
+            <!-- <div id="js-sound" class="sound is-playing" data-source="http://bacter.elephantstone.net/wp-content/themes/bacter/assets/images/audio/bacter.mp3">
+              <span class="sound__text">SOUND</span>
+              <canvas id="canvas" style="display: none;"></canvas>
+              <div id="js-sound__wave" class="sound__wave">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div> -->
+
+            <div id="fb-icon">
+              <a href="https://www.facebook.com/SlowIzzm" target="_blank">
+                <li class="social-icon fa fa-facebook" id="facebook"></li>
+              </a>
+            </div>
+            <div id="tw-icon">
+              <a href="https://twitter.com/getyabrainon" target="_blank">
+                <li class="social-icon fa fa-twitter" id="twitter"></li>
+              </a>
+            </div>
+            <div id="git-icon">
+              <a href="https://github.com/slowizzm" target="_blank">
+                <li class="social-icon fa fa-github" id="github"></li>
+              </a>
+            </div>
+            <div id="inst-icon">
+              <a href="https://www.instagram.com/slow_izzm/" target="_blank">
+                <li class="social-icon fa fa-instagram" id="instagram"></li>
+              </a>
+            </div>
+            <div id="share-icon">
+              <a href="" target="_blank">
+                <li class="social-icon fa fa-share-alt" id="share"></li>
+              </a>
+            </div>
+
+            <div class="page" id="p1">
+              <section class="icon fa fa-cube"><span class="title">About</span></section>
+            </div>
+            <div class="page" id="p2">
+              <section class="icon fa fa-cube"><span class="title">Portfolio</span></section>
+              <div class="imgbox">
+                <div class="background-center">
+                  <img src="./img/port1.jpg">
+                </div>
+              </div>
+            </div>
+            <div class="page" id="p3">
+              <section class="icon fa fa-cube"><span class="title">Process</span></section>
+            </div>
+            <div class="page" id="p4">
+              <section class="icon fa fa-cube"><span class="title">Blog</span></section>
+            </div>
+            <div class="page" id="p5">
+              <section class="icon fa fa-cube"><span class="title">Contact</span></section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>
