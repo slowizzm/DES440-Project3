@@ -1,0 +1,101 @@
+/*PROCESS*/
+
+.imgbox-left {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: 5vw;
+  margin-top: 5vw;
+  width: 30%;
+  height: 100vh;
+  opacity: 1;
+  overflow: scroll;
+}
+
+.imgbox-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 40vw;
+  margin-top: 35vw;
+  width: 30%;
+  height: 100vh;
+  opacity: 1;
+  overflow: scroll;
+}
+
+.imgbox-left-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 5vw;
+  margin-top: 60vw;
+  width: 30%;
+  height: 100vh;
+  opacity: 1;
+  overflow: scroll;
+}
+
+.imgbox-right-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 40vw;
+  margin-top: 85vw;
+  width: 30%;
+  height: 100vh;
+  opacity: 1;
+  overflow: scroll;
+}
+
+.background-center {
+  /*position: relative;*/
+  /*max-width: 1400px;*/
+  background-color: #bbc2bb;
+}
+
+.txtbox-right {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 40vw;
+  margin-top: 170px;
+  width: 30%;
+  height: 100vh;
+}
+
+.txtbox-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 5vw;
+  margin-top: 650px;
+  width: 30%;
+  height: 100vh;
+  font-size: 33px;
+  color: white;
+}
+
+.txtbox-right-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 40vw;
+  margin-top: 1060px;
+  width: 30%;
+  height: 100vh;
+  font-size: 33px;
+  color: white;
+}
+
+.txtbox-left-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 5vw;
+  margin-top: 1560px;
+  width: 30%;
+  height: 100vh;
+  font-size: 33px;
+  color: white;
+}

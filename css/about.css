@@ -1,0 +1,19 @@
+/*ABOUT*/
+.imgbox-center {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  opacity: 1;
+  background-color: inherit;
+}
+
+.introbox img {
+  float: left;
+  margin-left: 5vw;
+  margin-top: 250px;
+  width: 75%;
+  height: auto;
+  display: block;
+}

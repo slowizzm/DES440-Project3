@@ -13,27 +13,58 @@ html, body, .page {
   overflow: hidden;
 }
 
-.imgbox img {
-  float: left;
-  width: 5%%;
-  height: auto;
-}
-
-.imgbox {
+.logo {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 1%%;
-  height: auto;
-  opacity: 1;
-  z-index: -1;
+  right: 0;
+  font-size: 33px;
+  color: #FFFFFF;
+  z-index: 100;
+  margin-top: 0;
+  margin-right: 60px;
 }
 
-.background-center {
-  position: relative;
-  /*max-width: 1400px;*/
-  background-color: #bbc2bb;
+h1 {
+  text-align: center;
+  color: #a8a8a8;
+  @include text-shadow(1px 1px 0 rgba(white, 1));
+  margin-top: 100px;
+  margin-right: 30vw;
+  font-family: 'Bungee', cursive;
+  font-size: 1.5vw;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  line-height: 2.2em;
 }
+
+h3 {
+  text-align: center;
+  color: #a8a8a8;
+  @include text-shadow(1px 1px 0 rgba(white, 1));
+  margin-top: 100px;
+  margin-right: 30vw;
+  font-family: 'Bungee', cursive;
+  font-size: 1.1vw;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  line-height: 2.2em;
+}
+
+.imgbox img {
+  float: left;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+
 
 canvas {
   position: fixed;
@@ -66,36 +97,42 @@ canvas {
 }
 
 * {
-  font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+  font-family: 'Montserrat', 'lato', 'helvetica', sans-serif;
 }
 
 .page {
   position: absolute;
+  overflow: scroll;
+}
+
+p{
+  font-family: 'Montserrat', 'lato', 'helvetica', sans-serif;
+  font-size: 23px; color: white;
 }
 
 #p1 {
-  left: 0;
+  left: 15%;
 }
 
 #p2, #p3, #p4, #p5 {
-  left: 210%;
+  left: 200%;
   /*left: 200vw;*/
 }
 
-#p1 { background: black; opacity: 0.5;}
-#p2 { background: black; opacity: 0.5;}
-#p3 { background: black; opacity: 0.5;}
-#p4 { background: black; opacity: 0.5;}
-#p5 { background: black; opacity: 0.5;}
+#p1 { background: clear; opacity: 0.1;}
+#p2 { background: black; opacity: 0.8;}
+#p3 { background: black; opacity: 0.8;}
+#p4 { background: black; opacity: 0.8;}
+#p5 { background: black; opacity: 0.8;}
 
 #t2:target #p2,
 #t3:target #p3,
 #t4:target #p4,
 #t5:target #p5 {
-  transform: translateX(-190%);
-  -webkit-transform: translateX(-190%);
-  -moz-transform: translateX(-190%);
-  -o-transform: translateX(-190%);
+  transform: translateX(-175%);
+  -webkit-transform: translateX(-175%);
+  -moz-transform: translateX(-175%);
+  -o-transform: translateX(-175%);
   transition-delay: .4s !important;
 }
 
@@ -149,10 +186,11 @@ ul .icon:hover {
 #t3:target #process,
 #t4:target #blog,
 #t5:target #contact {
-  transform: scale(1.2) !important;
-  -webkit-transform: scale(1.2) !important;
-  -moz-transform: scale(1.2) !important;
-  -o-transform: scale(1.2) !important;
+  transform: scale(0.8) !important;
+  -webkit-transform: scale(0.8) !important;
+  -moz-transform: scale(0.8) !important;
+  -o-transform: scale(0.8) !important;
+  color: orange;
 }
 
 ul {
@@ -230,7 +268,9 @@ a {
 }
 
 .title {
-  font-size: 38px;
+  margin-left: 133px;
+  margin-top: -23px;
+  font-size: 23px;
 }
 
 .hint {
@@ -242,7 +282,7 @@ a {
 }
 
 .hint a {
-  color: yellow;
+  color: orange;
   transition: all 250ms ease-out;
   -webkit-transition: all 250ms ease-out;
   -moz-transition: all 250ms ease-out;

@@ -1,0 +1,153 @@
+/*BLOG*/
+
+.imgbox-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 5vw;
+  margin-top: 25vw;
+  width: 15%;
+  height: 15vh;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.imgbox-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 22vw;
+  margin-top: 25vw;
+  width: 15%;
+  height: 15vh;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.imgbox-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 39vw;
+  margin-top: 25vw;
+  width: 15%;
+  height: 15vh;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.imgbox-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 56vw;
+  margin-top: 25vw;
+  width: 15%;
+  height: 15vh;
+  opacity: 1;
+  overflow: hidden;
+  font-size: 9px;
+  color: white;
+}
+
+.blog-title-1 p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 5vw;
+  margin-top: 615px;
+  width: 15%;
+  height: 30vh;
+  font-size: 15px;
+  color: white;
+  overflow: hidden;
+}
+
+.blog-title-2 p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 22vw;
+  margin-top: 615px;
+  width: 15%;
+  height: 30vh;
+  font-size: 15px;
+  color: white;
+  overflow: hidden;
+}
+
+.blog-title-3 p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 39vw;
+  margin-top: 615px;
+  width: 15%;
+  height: 30vh;
+  font-size: 15px;
+  color: white;
+  overflow: hidden;
+}
+
+.blog-title-4 p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 56vw;
+  margin-top: 615px;
+  width: 15%;
+  height: 30vh;
+  font-size: 15px;
+  color: white;
+  overflow: hidden;
+}
+.txtbox-1 p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 5vw;
+  margin-top: 655px;
+  width: 15%;
+  height: 30vh;
+  font-size: 15px;
+  color: white;
+  overflow: hidden;
+}
+
+.txtbox-2 p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 22vw;
+  margin-top: 655px;
+  width: 15%;
+  height: 30vh;
+  font-size: 15px;
+  color: white;
+  overflow: hidden;
+}
+
+.txtbox-3 p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 39vw;
+  margin-top: 655px;
+  width: 15%;
+  height: 30vh;
+  font-size: 15px;
+  color: white;
+  overflow: hidden;
+}
+.txtbox-4 p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 56vw;
+  margin-top: 655px;
+  width: 15%;
+  height: 30vh;
+  font-size: 15px;
+  color: white;
+  overflow: hidden;
+}

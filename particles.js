@@ -1,7 +1,7 @@
 var _s = function(sketch) {
 
 var MAX_PARTICLES = 170;
-var COLORS = [ 'rgba(242,43,43,.1)', 'rgba(96,0,40,.1)', 'rgba(55,43,255,.1)', 'rgba(242,0,55,.1)', 'rgba(242,0,33,.1)' ];
+var COLORS = [ 'rgba(42,43,243,.1)', 'rgba(196,200,240,.1)', 'rgba(155,243,255,.1)', 'rgba(242,200,255,.1)', 'rgba(242,200,233,.1)' ];
 
 //ARRAYS
 var particles = [];
