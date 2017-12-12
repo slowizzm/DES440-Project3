@@ -48,7 +48,7 @@ sketch.Particle.prototype.show = function() {
   //arc( this.location.x, this.location.y, this.size, 0, TWO_PI );
   sketch.fill(this.color);
   sketch.noStroke();
-  sketch.ellipse(this.location.x,this.location.y, this.size, this.size);
+  sketch.ellipse(this.location.x,this.location.y, this.size/2, this.size/2);
 }
 
 sketch.spawn = function(x,y) {
