@@ -1,1 +1,3 @@
 # DES445-Project3
+
+desktop only atm. work in progress ...
